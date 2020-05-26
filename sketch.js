@@ -6,6 +6,8 @@ const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 const Render = Matter.Render;
 const Constraint = Matter.Constraint;
+
+
 function preload()
 {
 	
@@ -24,16 +26,18 @@ function setup() {
     bobObject3 = new Bob(400,400,50,50);
     bobObject4 = new Bob(450,400,50,50);
     bobObject5 = new Bob(500,400,50,50);                                                                       
-    rope1 = new Rope(bobObject1.body,roof.body,0,0);
-   Engine.run(engine);
-  
+   rope1 = new Rope(bobObject1.body,roof.body);
+   rope2 = new Rope(bobObject2.body,roof.body);
+   rope3 = new Rope(bobObject3.body,roof.body);
+   rope4 = new Rope(bobObject4.body,roof.body);
+   rope5 = new Rope(bobObject5.body,roof.body);
 }
 
 
 function draw() {
-  rectMode(CENTER);
+  
   background("white");
-   
+  Engine.update(engine);
   roof.display();
 
   bobObject1.display();
@@ -43,8 +47,10 @@ function draw() {
   bobObject5.display();
  
   rope1.display();
-  drawSprites();
- 
+  rope2.display();
+  rope3.display();
+  rope4.display();
+  rope5.display();
 }
 
 
