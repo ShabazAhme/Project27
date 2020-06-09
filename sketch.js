@@ -28,7 +28,7 @@ function setup() {
     rope2 = new Rope(bobObject2.body,roof.body,0,0);
     rope3 = new Rope(bobObject3.body,roof.body,0,0);
     rope4 = new Rope(bobObject4.body,roof.body,0,0);
-    rope5 = new Rope(bobObject5.body,roof.body,0,0);
+    rope5 = new Rope(bobObject5.body,0 ,500,100);
     
     Engine.run(engine);
   
